@@ -7,9 +7,9 @@ Plugin para autocompletar o endereço no cadastro do usuário baseando-se no cep
 Tutorial
 -------
 
-Passo 1 - Instale e habilite o plugin em Administrar Plugins
-Passo 2 - Configure os campos do usuário para o mapeamento do cep
-Passo 3 - Habilite outras configurações para ativar a validação de cpf ou cnpj também
+* Passo 1 - Instale e habilite o plugin em Administrar Plugins
+* Passo 2 - Configure os campos do usuário para o mapeamento do cep
+* Passo 3 - Habilite outras configurações para ativar a validação de cpf ou cnpj também
 
 Licença
 -------
