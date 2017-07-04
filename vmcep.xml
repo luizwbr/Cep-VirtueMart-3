@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="plugin" group="system" method="upgrade">
+   <name>VMCustom - Auto-completar CEP</name>
+   <version>2.0.15</version>
+   <creationDate>2017</creationDate>
+   <author>Luiz Weber</author>
+   <authorEmail>weber@weber.eti.br</authorEmail>
+   <authorUrl>http://weber.eti.br</authorUrl>
+   <copyright>Copyright © 2017 - Weber TI All rights reserved.</copyright>
+   <license>GNU General Public License v2.0</license>
+   <description>Auto completar Cep - Weber TI</description>
+	 <files>
+	   <filename plugin="vmcep">vmcep.php</filename>
+		  <filename>janelacep.php</filename>
+        <filename>buscacep.php</filename>
+		<folder>assets</folder>
+	  </files>
+    <config>
+		<fields name="params">
+    		<fieldset name="basic">
+                <field name="separador1" label="&lt;b&gt; Ativação&lt;/b&gt;" type="spacer"/>
+
+                <field name="ativar_cep" type="radio"
+                  description="Ativar CEP"
+                  label="Ativar CEP"
+                  default="1"
+                >
+                  <option value="1">Sim</option>
+                  <option value="0">Não</option>
+                </field>
+                <field name="ativar_cpf" type="radio"
+                  description="Ativar Validação CPF/CNPJ"
+                  label="Ativar Validação CPF/CNPJ"
+                  default="1"
+                >
+                  <option value="1">Sim</option>
+                  <option value="0">Não</option>
+                </field>                
+                
+                <field name="separador2" label="&lt;b&gt;Campos Extras&lt;/b&gt;" type="spacer"/>
+
+                <field name="campo_cpf" type="text" default="fax" label="Nome do Campo do cpf" />
+                <field name="campo_cnpj" type="text" default="cnpj" label="Nome do Campo do cnpj" />
+                <field name="campo_telefone" type="text" default="phone_1" label="Nome do Campo telefone" />
+                <field name="campo_celular" type="text" default="phone_2" label="Nome do Campo celular" />
+                <field name="campo_endereco" type="text" default="address_1" label="Nome do Campo Endereço" />
+                <field name="campo_bairro" type="text" default="address_2" label="Nome do Campo Bairro" />
+
+
+                <field name="separador3" label="&lt;b&gt;Configurações E-mail/Usuário&lt;/b&gt;" type="spacer"/>
+
+                <field name="validar_usuario" type="radio"
+                  description="Validar usuário"
+                  label="Validar usuário no cadastro"
+                  default="1"
+                >
+                  <option value="1">Sim</option>
+                  <option value="0">Não</option>
+                </field>
+                <field name="validar_email" type="radio"
+                  description="Validar E-mail"
+                  label="Validar e-mail no cadastro"
+                  default="1"
+                >
+                  <option value="1">Sim</option>
+                  <option value="0">Não</option>
+                </field>
+             
+             
+                 <field name="mesmo_campo_email_usuario" type="radio"
+                  description="Usar campo e-mail como usuário?"
+                  label="Esconde o campo usuário no cadastro e duplica o valor do campo e-mail"
+                  default="0"
+                >
+                  <option value="1">Sim</option>
+                  <option value="0">Não</option>
+                </field>
+
+                <field name="separador4" label="&lt;b&gt;Configurações CPF/CNPJ&lt;/b&gt;" type="spacer"/>
+
+                <field name="formatar_cpf" type="radio"
+                  description="Gravar somente números (CPF e CNPJ)"
+                  label="Gravar somente números nos campos cpf e cnpj"
+                  default="0"
+                >
+                  <option value="1">Sim</option>
+                  <option value="0">Não</option>
+                </field>
+
+
+                <field name="separador5" label="&lt;b&gt;Outras Configurações&lt;/b&gt;" type="spacer"/>
+
+                <field name="ativar_autocomplete" type="radio"
+                  description="Ativar Auto-completar navegador"
+                  label="Ativar auto-completar do navegador nos campos do formulário"
+                  default="0"
+                >
+                  <option value="1">Sim</option>
+                  <option value="0">Não</option>
+                </field>
+
+                <field name="campo_tipo_cadastro" type="text" default="Tipo_cadastro" label="Nome do Campo para escolha do tipo de cadastro" />
+                <field name="campo_separador" type="text" default="Separador Campos Pessoa Jurídica" label="Nome do Campo para separar os campos de pessoa jurídica" />
+
+    		</fieldset>
+		</fields>
+	</config>
+</extension>
